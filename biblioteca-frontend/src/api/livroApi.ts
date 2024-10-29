@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8001/api/livros/';
+const API_URL = 'http://127.0.0.1:8000/api/livros/';
 
 export const fetchLivros = async () => {
   const response = await axios.get(API_URL);
