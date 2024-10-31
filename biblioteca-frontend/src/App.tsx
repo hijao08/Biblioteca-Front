@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card, Container, Row, Col, Badge } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'; // Importa o arquivo CSS
 
 interface Livro {
   id: number;
@@ -28,28 +29,27 @@ function App() {
   }, []);
 
   return (
-    <Container>
-      <h1 className="text-center mt-4">Biblioteca Online</h1>
-      <h2 className="text-center mb-4">Lista de Livros</h2>
+    <Container className="container-custom">
+      <h1 className="title-main">Biblioteca Online</h1>
+      <h2 className="title-sub">Lista de Livros</h2>
 
       <Row>
         {livros.length > 0 ? (
           livros.map((livro) => (
-            <Col md={2.5} sm={2} xs={12} className="mb-4" key={livro.id}>
-              <Card>
-                {/* Exibe a imagem do livro */}
+            <Col md={3} sm={6} xs={12} className="mb-4" key={livro.id}>
+              <Card className="card-custom">
                 {livro.imagem && (
-                  <Card.Img variant="top" width={40} src={livro.imagem} alt={livro.titulo} />
+                  <Card.Img variant="top" src={livro.imagem} alt={livro.titulo} className="card-img" />
                 )}
                 <Card.Body>
-                  <Card.Title>{livro.titulo}</Card.Title>
-                  <Card.Text>
+                  <Card.Title className="card-title">{livro.titulo}</Card.Title>
+                  <Card.Text className="card-text-muted">
                     <strong>Autor:</strong> {livro.autor}
                   </Card.Text>
                   <Badge
                     pill
                     bg={livro.disponivel ? "success" : "danger"}
-                    className="mt-2"
+                    className="badge-availability"
                   >
                     {livro.disponivel ? "Disponível" : "Indisponível"}
                   </Badge>

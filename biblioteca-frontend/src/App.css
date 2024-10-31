@@ -1,38 +1,51 @@
-.App {
+/* Estilo para o container principal */
+.container-custom {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Títulos principais */
+.title-main {
+  font-size: 2.5rem;
   text-align: center;
+  margin-top: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title-sub {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #6c757d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilos para os cards */
+.card-custom {
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.card-custom:hover {
+  transform: translateY(-5px);
 }
 
-.App-link {
-  color: #61dafb;
+.card-img {
+  height: 250px;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.card-text-muted {
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+/* Badge de disponibilidade */
+.badge-availability {
+  font-size: 0.9em;
+  padding: 0.5em 1em;
 }
