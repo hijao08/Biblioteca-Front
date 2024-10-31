@@ -1,7 +1,16 @@
+/* Fundo da página */
+body {
+  background-color: #001641; /* Cor de fundo suave */
+}
+
 /* Estilo para o container principal */
 .container-custom {
   margin-top: 3rem;
   margin-bottom: 3rem;
+  background-color: #ffffff; /* Fundo branco para o container */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Títulos principais */
@@ -9,6 +18,7 @@
   font-size: 2.5rem;
   text-align: center;
   margin-top: 1rem;
+  color: #333333;
 }
 
 .title-sub {
@@ -23,15 +33,19 @@
   height: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease-in-out;
+  border: none;
+  border-radius: 8px;
 }
 
 .card-custom:hover {
-  transform: translateY(-5px);
+  transform: translateY(-30px);
 }
 
 .card-img {
   height: 250px;
   object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .card-title {
